@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+   <bean class="com.manish.MarginBean" id="id1">
+     <property name="mrgId" value="101" />
+     <property name="mrgCode" value="H1A5" />
+   </bean>
+   
+   <bean class="com.manish.ModelBean" id="id2">
+     <property name="modelId" value="202" />
+     <property name="modelCode" value="A1AD" />
+     <property name="modelCost" value="9000.96" />
+     <property name="mgObj" ref="id1" />
+   </bean>
+   
+   <bean class="com.manish.ProductBean" id="id3">
+     <property name="proId" value="12" />
+     <property name="proName" value="Laptop" />
+     <property name="modelObj" ref="id2" />
+   </bean>
+</beans>
